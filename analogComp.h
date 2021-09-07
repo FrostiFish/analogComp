@@ -70,6 +70,9 @@
 	#define ATMEGAxU
 	#define NUM_ANALOG_INPUTS 14 	// there are more inputs on the 32u4 than are broken out to the board
 															// and they are not mapped sequentially
+#elif defined (ARDUINO_ARCH_SAMD) && defined(ARDUINO_SAMD_ZERO)
+	#define SAMD21
+	#define NUM_ANALOG_INPUTS 14
 #else
 	#error Sorry, microcontroller not supported!
 #endif
